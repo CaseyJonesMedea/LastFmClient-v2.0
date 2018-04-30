@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:background="@drawable/fon"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:visibility="invisible"
+            android:id="@+id/load"
+            layout="@layout/fragment_load">
+        </include>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <kukhto.viachaslau.mr.ilikelastfmver20.presentation.customviews.CustomFontsTextView
+                    android:id="@+id/i"
+                    android:textColor="@color/colorWhite"
+                    app:fonts="font3"
+                    android:layout_weight="1"
+                    android:text="@string/i"
+                    android:textSize="100dp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+
+                <ImageView
+                    android:padding="30dp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ok_like"/>
+            </LinearLayout>
+
+            <kukhto.viachaslau.mr.ilikelastfmver20.presentation.customviews.CustomFontsTextView
+                android:id="@+id/lastfm"
+                android:text="@string/lastfm"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:textSize="100dp"
+                app:fonts="font2"
+                android:layout_weight="3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+            <LinearLayout
+                android:paddingTop="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/btn_log_in"
+                    style="@style/ButtonStyle"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/log_in"
+                    android:visibility="invisible"/>
+                <Button
+                    android:id="@+id/btn_registration"
+                    style="@style/ButtonStyle"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/registration"
+                    android:visibility="invisible"/>
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+</android.support.v4.widget.SwipeRefreshLayout>
+
